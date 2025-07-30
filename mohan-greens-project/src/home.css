@@ -1,0 +1,23 @@
+.main-layout {
+  display: flex;
+  flex-direction: row; /* left to right */
+  height: 100vh;
+}
+
+.navbar-column {
+  width: 75%;
+  max-width:75%;
+  padding: 20px;
+   top: 0;
+   border: 2px solid black;
+}
+
+/* Right side - Sidebar */
+.sidebar-column {
+  width: 25%; 
+  padding: 20px;
+  top: 0;
+  background-color: #ffffff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}

@@ -96,8 +96,8 @@
   padding: 10px 14px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-size: 14px;
-  width: 80%;
+  font-size: 12px;
+  width: 90%;
 }
 
 .custom-phone-container {
@@ -109,7 +109,7 @@
   padding-left: 48px !important;
   border-radius: 8px !important;
   border: 1px solid #ccc !important;
-  font-size: 14px !important;
+  font-size: 12px !important;
   height: 40px !important;
 }
 
@@ -124,7 +124,7 @@
   align-items: flex-start;  
   gap: 10px;
   margin-top: 15px;
-  font-size: 12px;
+  font-size: 8px;
   color: #333;
   width: 90%;
 }
@@ -132,11 +132,6 @@
 .checkbox-container input[type="checkbox"] {
   margin-top: 3px;
 }
-
-.consent-text {
-  line-height: 1.4;
-}
-
 .consent-text a {
   color: #007bff;
   text-decoration: underline;
@@ -165,8 +160,8 @@
 }
 
 .pickup-img {
-  max-width: 100%;
-  height: auto;
+  max-width: 90%;
+  height: 200px;
   border-radius: 8px;
 }
 
