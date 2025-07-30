@@ -1,12 +1,13 @@
 import React from "react";
 import '../css/navbar.css';
+import Logo from "../../assests/mohangrrenslogo.png";
 
 function Navbar() {
   return (
     <nav className="navbar">
       {/* Left: Logo and Title */}
       <div className="navbar-left">
-        <img src="/logo.png" alt="Mohan Greens" className="logo" />
+        <img src={Logo} alt="Mohan Greens" className="logo" />
         <div className="text-info">
           <div className="project-name">Mohan <span className="green-text">Precious</span> Greens</div>
           <div className="location">Ambernath (East)</div>

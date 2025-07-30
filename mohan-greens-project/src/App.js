@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import CallRequestForm from './Components/html/sidebar';
+import Home from '../src/home';
 
 function App() {
   return (
    <>
-   <CallRequestForm/>
+   <Home/>
    </>
   );
 }
