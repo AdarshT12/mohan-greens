@@ -4,7 +4,7 @@ import '../css/navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      {/* Left: Logo and Title */}
+      {/ Left: Logo and Title /}
       <div className="navbar-left">
         <img src="/mohangreenslogo.png" alt="Mohan Greens" className="logo" />
         <div className="text-info">
