@@ -6,7 +6,7 @@ function Navbar() {
     <nav className="navbar">
       {/* Left: Logo and Title */}
       <div className="navbar-left">
-        <img src="/logo.png" alt="Mohan Greens" className="logo" />
+        <img src="/mohangreenslogo.png" alt="Mohan Greens" className="logo" />
         <div className="text-info">
           <div className="project-name">Mohan <span className="green-text">Precious</span> Greens</div>
           <div className="location">Ambernath (East)</div>
