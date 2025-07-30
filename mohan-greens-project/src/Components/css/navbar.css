@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.text-info {
+  line-height: 1.2;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #1b4d2f;
+}
+
+.green-text {
+  color: #76b947;
+}
+
+.location {
+  font-size: 11px;
+  color: #666;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item {
+  font-size: 14px;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding-bottom: 4px;
+}
+
+.nav-item:hover {
+  color: #226d3d;
+}
+
+.nav-item.active {
+  font-weight: bold;
+  color: #226d3d;
+  border-bottom: 2px solid #226d3d;
+}
+
+.navbar-right .blox-logo {
+  height: 22px;
+}
