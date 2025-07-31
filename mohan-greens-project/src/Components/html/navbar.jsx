@@ -1,11 +1,7 @@
 import React from "react";
 import '../css/navbar.css';
 import Logo from "../../assests/mohangrrenslogo.png";
-<<<<<<< HEAD
 import 'remixicon/fonts/remixicon.css';
-
-=======
->>>>>>> 316bf74a8de24866fbff52b8a9575848de469622
 
 
 function Navbar() {
@@ -13,11 +9,7 @@ function Navbar() {
     <nav className="navbar">
       {/* Left: Logo and Title */}
       <div className="navbar-left">
-<<<<<<< HEAD
         <img src={Logo} alt="Mohan Greens" className="logo" />        
-=======
-        <img src={Logo} alt="Mohan Greens" className="logo" />
->>>>>>> 316bf74a8de24866fbff52b8a9575848de469622
         <div className="text-info">
         </div>
       </div>
