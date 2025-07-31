@@ -5,8 +5,15 @@ import Sidebar from "../src/Components/html/sidebar";
 function Home() {
   return (
     <>
-    <Navbar/>
-    <Sidebar/>
+    <main className="main-layout">
+      <section className="navbar-column">
+        <Navbar />
+      </section>
+      <section className="sidebar-column">
+        <Sidebar />
+      </section>
+    </main>
+    
     </>
   );
 }
