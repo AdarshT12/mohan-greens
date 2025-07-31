@@ -12,11 +12,6 @@
     "react-dom": "^19.1.1",
     "react-phone-input-2": "^2.15.1",
     "react-scripts": "5.0.1",
-<<<<<<< HEAD
-    "remixicon": "^4.6.0",
-=======
-    "swiper": "^11.2.10",
->>>>>>> 316bf74a8de24866fbff52b8a9575848de469622
     "web-vitals": "^2.1.4"
   },
   "scripts": {
