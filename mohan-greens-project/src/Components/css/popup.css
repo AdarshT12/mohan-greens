@@ -1,0 +1,147 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  width: 90%;
+  max-width: 720px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px 30px;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.popup-heading {
+  color: #006400;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background: #006400;
+  margin-bottom: 20px;
+}
+
+.popup-body {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.popup-left {
+  flex: 1;
+  background: #f0f4f0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.promise-title {
+  background: #006400;
+  color: white;
+  padding: 8px 0;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.promise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.promise-list li {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.popup-right {
+  flex: 2;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.country-code {
+  white-space: nowrap;
+  font-size: 14px;
+  padding: 8px;
+  background: #f4f4f4;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.checkbox-area {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.checkbox-area a {
+  color: #006400;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+.submit-btn {
+  background: #006400;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 100, 0, 0.4);
+}
+
+.availability-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 2px solid #006400;
+  border-radius: 8px;
+  padding: 15px 0;
+}
+
+.availability-section button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #006400;
+  cursor: pointer;
+}
