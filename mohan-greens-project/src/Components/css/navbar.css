@@ -14,7 +14,7 @@
 
 .logo {
   height: 60px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .text-info {
@@ -38,7 +38,7 @@
 
 .navbar-center {
   display: flex;
-  gap: 100px;
+  gap: 50px;
 }
 
 .nav-item {

@@ -40,7 +40,7 @@ function Home() {
         {/* Add more SwiperSlides for more projects */}
       </Swiper>
     </div>
-    return (
+    
     <div className="project-container">
       <div className="project-content">
         <h2>Mohan Precious Greens</h2>
@@ -59,6 +59,24 @@ function Home() {
       </div>
       <div className="project-image">
         
+      </div>
+    </div>
+      <div className="pricing-container">
+      <h2 className="pricing-heading">Area & pricing</h2>
+      <div className="underline" />
+      <div className="pricing-cards">
+        <div className="pricing-card">
+          <h3>1 BHK</h3>
+          <p className="size">500 Sq. ft</p>
+          <p className="price">₹ 36.50 Lacs* Onwards</p>
+          <button className="costing-button">Complete Costing Details</button>
+        </div>
+        <div className="pricing-card">
+          <h3>2 BHK</h3>
+          <p className="size">610-710 Sq. ft</p>
+          <p className="price">₹ 52.50 Lacs* Onwards</p>
+          <button className="costing-button">Complete Costing Details</button>
+        </div>
       </div>
     </div>
     </>
