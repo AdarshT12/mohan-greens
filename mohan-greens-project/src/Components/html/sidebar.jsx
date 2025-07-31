@@ -72,8 +72,8 @@ const EnquiryForm = () => {
           />
           <span className="consent-text">
             I Consent to the Processing of Provided Data According To{" "}
-            <a href="#">Privacy Policy</a> |{" "}
-            <a href="#">Terms & Conditions</a>. I Authorize Blox and its
+            <a href="home.jsx">Privacy Policy</a> |{" "}
+            <a href="home.jsx">Terms & Conditions</a>. I Authorize Blox and its
             representatives to Call, SMS, Email or WhatsApp Me About Its
             Products and Offers. This Consent Overrides Any Registration For
             DNC/NDNC.
