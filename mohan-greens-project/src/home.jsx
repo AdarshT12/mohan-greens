@@ -109,6 +109,65 @@ function Home() {
           </div>
         </div>
       </div>
+        <div className="layout-container">
+      <div className="layout-card">
+        <h2 className="layout-heading">Master Plan Layout</h2>
+        <div className="image-box left-rounded">
+          <img src="/masterplan.jpg" alt="Master Plan" className="layout-image" />
+          <div className="overlay-text">Request Master Plan Layout</div>
+        </div>
+        <button className="layout-btn">Request Master Plan Layout</button>
+      </div>
+
+      <div className="layout-card">
+        <h2 className="layout-heading">Unit Plan Layout</h2>
+        <div className="image-box right-rounded">
+          <img src="/unitplan.jpg" alt="Unit Plan" className="layout-image" />
+          <div className="overlay-text">Request Unit Plan Layout</div>
+        </div>
+        <button className="layout-btn">Request Unit Plan Layout</button>
+      </div>
+    </div>
+        <div className="location-section">
+      <h2 className="location-heading">Location</h2>
+      <div className="underline" />
+
+      <div className="map-container">
+        <iframe
+          title="Mohan Precious Greens Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.042356090269!2d73.17162891437993!3d19.192738952647885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be794c409bc2fc7%3A0x8a34c8aa0ed3de7f!2sMohan%20Precious%20Greens%20(MPG)!5e0!3m2!1sen!2sin!4v1691216929184!5m2!1sen!2sin"
+          width="100%"
+          height="450"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+        <div className="footer-container">
+
+        <p>Project MahaRERA No. – P51700046171</p>
+        <p>Agent MahaRERA No. – A51900029429</p>
+        <p>
+          (<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noreferrer">
+            https://maharera.maharashtra.gov.in/
+          </a>)
+        </p>
+      </div>
+
+      <p className="disclaimer">
+        Disclaimer : The content is for information purposes only and does not constitute an offer to avail of any service.
+        The prices mentioned are subject to change without notice and the properties mentioned are subject to availability.
+        Images are for representation purposes only. We are the authorized marketing partner, Project RERA No:
+        P51700046171. We may send updates to the mobile number/email id registered with us.
+      </p>
+
+      <div className="footer-bottom">
+        <div>
+          <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+        </div>
+        <p>All Rights Reserved. © 2025 Method & Madness Technology Pvt. Ltd</p>
+      </div>
     </>
   );
 }
