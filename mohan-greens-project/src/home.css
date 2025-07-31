@@ -2,16 +2,18 @@
   width: 100%;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
-.slide {
-  position: relative;
+.swiper, .swiper-wrapper, .swiper-slide {
   width: 100%;
   height: 100%;
 }
 
+/* Ensure image fills fully */
 .slide-img {
   width: 100%;
-  height: 530px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
