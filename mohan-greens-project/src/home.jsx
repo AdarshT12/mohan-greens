@@ -4,42 +4,35 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Banner1 from "../src/assests/bannner-1.webp";
+import Banner2 from "../src/assests/banner-2.webp";
+import '../src/home.css';
 
 function Home() {
   return (
     <>
-      <Navbar/>
-       <div className="slider-container">
-      <Swiper
-        modules={[Navigation, Autoplay]}
-        navigation
-        autoplay={{ delay: 3000 }}
-        loop
-        className="swiper-wrapper"
-      >
-        <SwiperSlide>
-          <div className="slide">
-            <img
-              src="/path-to-your-image.png"
-              alt="Property"
-              className="slide-img"
-            />
-            <div className="property-card">
-              <h2>GREENS</h2>
-              <p>Ambernath East, Thane</p>
-              <p><strong>Land Parcel:</strong> 10 Acres</p>
-              <p><strong>Floors:</strong> 18 Storey</p>
-              <p>1 & 2 BHK Homes Start</p>
-              <h3>₹ 36.50 Lacs* Onwards</h3>
-              <button className="enquire-btn">Enquire Now</button>
-              <p className="rera">RERA : P517000046171</p>
+      <Navbar />
+      <div className="slider-container">
+        <Swiper
+          modules={[Navigation, Autoplay]}
+          navigation
+          autoplay={{ delay: 3000 }}
+          loop
+          className="swiper-wrapper"
+        >
+          <SwiperSlide>
+            <div className="slide">
+              <img src={Banner1} alt="Property 1" className="slide-img" />
             </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
 
-        {/* Add more SwiperSlides for more projects */}
-      </Swiper>
-    </div>
+          <SwiperSlide>
+            <div className="slide">
+              <img src={Banner2} alt="Property 2" className="slide-img" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
     </>
   );
 }
