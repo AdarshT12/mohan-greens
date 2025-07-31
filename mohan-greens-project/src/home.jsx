@@ -46,54 +46,41 @@ function Home() {
           <h2>Mohan Precious Greens</h2>
           <div className="underline" />
 
-          {!showMore ? (
-            <>
-              <p>
-                Mohan Precious Greens is a residential project by the Mohan
-                Group, offering thoughtfully designed 1 & 2 BHK Homes with a
-                focus on modern living and sustainability. The project features
-                over 30 lifestyle amenities, including a lap pool, clubhouse,
-                mini-theatre, gym, spa, squash court, skating rink, cycling
-                track, aroma gardens, and dedicated zones for seniors and
-                children. Its architecture promotes eco-conscious living with
-                green decks, landscaped gardens, and sustainable infrastructure,
-                creating a healthy and vibrant community environment.
-              </p>
-              <a
-                href="#"
-                className="read-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setShowMore(true);
-                }}
-              >
-                Read more
-              </a>
-            </>
-          ) : (
-            <>
-              <p>
-                Strategically located just minutes away from Ambernath railway
-                station, Mohan Precious Greens offers excellent connectivity to
-                Mumbai, Thane, and surrounding areas. The project enjoys close
-                proximity to reputed schools, hospitals, supermarkets, and daily
-                conveniences, making it a practical choice for families and
-                working professionals alike. With a perfect blend of comfort,
-                connectivity, and lifestyle, it stands as an ideal residential
-                option in the fast-developing Ambernath East locality.
-              </p>
-              <a
-                href="#"
-                className="read-link"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setShowMore(false);
-                }}
-              >
-                Read less
-              </a>
-            </>
+          <p>
+            Mohan Precious Greens is a residential project by the Mohan Group,
+            offering thoughtfully designed 1 & 2 BHK Homes with a focus on
+            modern living and sustainability. The project features over 30
+            lifestyle amenities, including a lap pool, clubhouse, mini-theatre,
+            gym, spa, squash court, skating rink, cycling track, aroma gardens,
+            and dedicated zones for seniors and children. Its architecture
+            promotes eco-conscious living with green decks, landscaped gardens,
+            and sustainable infrastructure, creating a healthy and vibrant
+            community environment.
+          </p>
+
+          {showMore && (
+            <p>
+              Strategically located just minutes away from Ambernath railway
+              station, Mohan Precious Greens offers excellent connectivity to
+              Mumbai, Thane, and surrounding areas. The project enjoys close
+              proximity to reputed schools, hospitals, supermarkets, and daily
+              conveniences, making it a practical choice for families and
+              working professionals alike. With a perfect blend of comfort,
+              connectivity, and lifestyle, it stands as an ideal residential
+              option in the fast-developing Ambernath East locality.
+            </p>
           )}
+
+          <a
+            href="#"
+            className="read-link"
+            onClick={(e) => {
+              e.preventDefault();
+              setShowMore(!showMore);
+            }}
+          >
+            {showMore ? "Read less" : "Read more"}
+          </a>
 
           <button className="brochure-btn">Request Brochure</button>
         </div>

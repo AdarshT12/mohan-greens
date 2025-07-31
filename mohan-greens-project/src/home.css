@@ -16,4 +16,146 @@
   height: 100%;
   object-fit: cover;
   display: block;
+
+}
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.project-content {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+}
+
+.project-content h2 {
+  font-size: 32px;
+  color: #007030;
+  font-weight: 700;
+}
+
+.underline {
+  width: 50px;
+  height: 4px;
+  background: #ccc;
+  margin: 10px 0 20px 0;
+}
+
+.project-content p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.read-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.brochure-btn {
+  background-color: #0a9442;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.brochure-btn:hover {
+  background-color: #087535;
+}
+
+.project-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.pricing-container {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f5f7f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.pricing-heading {
+  color: #007030;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background: #ccc;
+  margin: 8px auto 30px auto;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px 25px;
+  width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+}
+
+.pricing-card h3 {
+  font-size: 24px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.size {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007030;
+  margin-bottom: 20px;
+}
+
+.costing-button {
+  background: #0a9442;
+  color: #fff;
+  padding: 10px 18px;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.costing-button:hover {
+  background: #087535;
 }
