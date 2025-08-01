@@ -1,16 +1,31 @@
+import React, { useState } from 'react';
 import './App.css';
 import Home from './home';
-import Sidebar from "./Components/html/sidebar";
+import Sidebar from "../src/Components/html/sidebar";
+import EnquiryPopup from '../src/Components/html/popup'; // Adjust path if needed
 
 function App() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <div className="home-container">
       <div className="main-content">
-        <Home />
+        <Home onBrochureClick={handleOpenPopup} />
       </div>
       <div className="sidebar-column">
-        <Sidebar />
+        <Sidebar onBrochureClick={handleOpenPopup}/>
       </div>
+
+      {/* Add the popup at the root level */}
+      <EnquiryPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
     </div>
   );
 }

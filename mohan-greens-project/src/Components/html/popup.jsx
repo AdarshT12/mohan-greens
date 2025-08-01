@@ -6,19 +6,21 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
     if (!name.trim() || !phone.trim() || !consent) {
       alert("Please fill all fields and accept terms.");
       return;
     }
 
-    // Form is valid — download brochure
+    // Trigger brochure download
     const link = document.createElement("a");
-    link.href = "/brochure.pdf"; 
+    link.href = "/brochure.pdf";
     link.download = "Brochure.pdf";
     link.click();
 
-    // Close popup after submission
+    // Close popup
     onClose();
   };
 
@@ -26,14 +28,15 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
 
   return (
     <div className="popup-overlay">
-      <div className="popup-content">
-        <button className="close-btn" onClick={onClose}>
+      <div className="popup-content" role="dialog" aria-modal="true">
+        <button className="close-btn" onClick={onClose} aria-label="Close Popup">
           &times;
         </button>
+
         <h2 className="popup-heading">ENQUIRE NOW</h2>
         <div className="underline" />
 
-        <div className="popup-body">
+        <form className="popup-body" onSubmit={handleSubmit}>
           <div className="popup-left">
             <h4 className="promise-title">WE PROMISE</h4>
             <ul className="promise-list">
@@ -50,17 +53,22 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="form-input"
+              required
             />
             <div className="phone-input">
               <span className="country-code">🇮🇳 +91</span>
               <input
-                type="text"
+                type="tel"
                 placeholder="Enter Your Number"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
                 className="form-input"
+                maxLength="10"
+                pattern="[0-9]{10}"
+                required
               />
             </div>
+
             <div className="checkbox-area">
               <input
                 type="checkbox"
@@ -74,16 +82,17 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
                 <a href="#"> Terms & Conditions</a>.
               </label>
             </div>
-            <button className="submit-btn" onClick={handleSubmit}>
+
+            <button type="submit" className="submit-btn">
               Submit
             </button>
           </div>
-        </div>
+        </form>
 
         <div className="availability-section">
-          <button>Available Units</button>
-          <button>Payment Plan</button>
-          <button>Floor Plans</button>
+          <button type="button">Available Units</button>
+          <button type="button">Payment Plan</button>
+          <button type="button">Floor Plans</button>
         </div>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React from "react";
 import '../css/navbar.css';
-import Logo from "../../assests/mohangrrenslogo.png";
+import Logo from "../../assets/mohangrrenslogo.png";
 import 'remixicon/fonts/remixicon.css';
 
 
-function Navbar() {
+function Navbar({ onBrochureClick }) {
   return (
     <nav className="navbar">
       {/* Left: Logo and Title */}
@@ -14,19 +14,15 @@ function Navbar() {
         </div>
       </div>
       {/* Center: Menu Items */}
-      <div className="navbar-center">
-        <div className="nav-item active"><i class="ri-home-9-line"></i> Home</div>
-        <div className="nav-item"><i class="ri-money-rupee-circle-line"></i>Price</div> 
-        <div className="nav-item"><i class="ri-building-line"></i> Site Plan</div>
-        <div className="nav-item"><i class="ri-wifi-line"></i> Amenities</div>
-        <div className="nav-item"><i class="ri-map-pin-2-line"></i> Location</div>
-        <div className="nav-item"><i class="ri-download-2-line"></i> Brochure</div>
+       <div className="navbar-center">
+        <div className="nav-item"><i className="ri-home-9-line"></i> Home</div>
+        <a href="#price"><div className="nav-item"><i className="ri-money-rupee-circle-line"></i> Price</div></a>
+        <a href="#site-plan"><div className="nav-item"><i className="ri-building-line"></i> Site Plan</div></a>
+        <a href="#amenities"><div className="nav-item"><i className="ri-wifi-line"></i> Amenities</div></a>
+        <a href="#location"><div className="nav-item"><i className="ri-map-pin-2-line"></i> Location</div></a>
+        <div className="nav-item" onClick={onBrochureClick}><i className="ri-download-2-line"></i> Brochure</div>
       </div>
-
-      {/* Right: Blox logo */}
-      <div className="navbar-right">
-        
-      </div>
+      
     </nav>
   );
 }

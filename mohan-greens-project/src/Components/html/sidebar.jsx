@@ -2,19 +2,33 @@ import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "../css/sidebar.css";
-import freePickupImage from "../../assests/freepick.png";
+import freePickupImage from "../../assets/freepick.png";
 
-const EnquiryForm = () => {
+const EnquiryForm = ({ onBrochureClick }) => {
+  const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!name.trim()) {
+      alert("Please enter your name.");
+      return;
+    }
+
+    if (!phone || phone.length < 10) {
+      alert("Please enter a valid phone number.");
+      return;
+    }
+
     if (!consent) {
       alert("Please provide consent before submitting.");
       return;
     }
-    alert("Form submitted!");
+
+    alert("Form submitted successfully!");
+    // Proceed with API call or brochure download
   };
 
   return (
@@ -30,7 +44,7 @@ const EnquiryForm = () => {
 
       {/* Call Back Box */}
       <div className="call-back-box">
-        <button className="request-call">Request Call Back</button>
+        <button className="request-call" onClick={onBrochureClick}>Request Call Back</button>
         <a
           href="https://wa.me/917710065994"
           target="_blank"
@@ -53,7 +67,11 @@ const EnquiryForm = () => {
           type="text"
           placeholder="Enter Your Name"
           className="name-input"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
         />
+
         <PhoneInput
           country={"in"}
           value={phone}
@@ -61,6 +79,11 @@ const EnquiryForm = () => {
           inputClass="custom-phone-input"
           buttonClass="custom-phone-button"
           containerClass="custom-phone-container"
+          inputProps={{
+            required: true,
+            name: "phone",
+            autoFocus: false
+          }}
         />
 
         {/* Consent Checkbox */}
@@ -72,11 +95,15 @@ const EnquiryForm = () => {
           />
           <span className="consent-text">
             I Consent to the Processing of Provided Data According To{" "}
-            <a href="home.jsx">Privacy Policy</a> |{" "}
-            <a href="home.jsx">Terms & Conditions</a>. I Authorize Blox and its
-            representatives to Call, SMS, Email or WhatsApp Me About Its
-            Products and Offers. This Consent Overrides Any Registration For
-            DNC/NDNC.
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
+              Privacy Policy
+            </a>{" "}
+            |{" "}
+            <a href="/terms" target="_blank" rel="noopener noreferrer">
+              Terms & Conditions
+            </a>. I Authorize Blox and its representatives to Call, SMS, Email
+            or WhatsApp Me About Its Products and Offers. This Consent
+            Overrides Any Registration For DNC/NDNC.
           </span>
         </label>
 
@@ -93,7 +120,6 @@ const EnquiryForm = () => {
           alt="Pickup & Drop"
           className="pickup-img"
         />
-        
       </div>
     </div>
   );
