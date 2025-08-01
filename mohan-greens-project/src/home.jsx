@@ -51,33 +51,7 @@ function Home({ onBrochureClick }) {
       <div className="slide">
         <img src={Banner1} alt="Banner 1" className="slide-img" />
 
-        <div className="property-card-overlay">
-          <div className="property-card">
-            <div className="card-badge">New Launch</div>
-            <h2 className="card-title">MOHAN PRECIOUS GREENS</h2>
-            <p className="card-location">Ambernath East, Thane</p>
-            <p className="card-by">By Mohan Group</p>
-
-            <div className="card-details">
-              <div>
-                <span className="label">Land Parcel</span>
-                <span className="value">10 Acres</span>
-              </div>
-              <div>
-                <span className="label">Floors</span>
-                <span className="value">18 Storey</span>
-              </div>
-            </div>
-
-            <div className="card-price">
-              <p>1 & 2 BHK Homes Start</p>
-              <h3>₹ 36.50 Lacs<sup>*</sup> Onwards</h3>
-            </div>
-
-            <button className="enquire-btn" onClick={onBrochureClick}>Enquire Now</button>
-            <p className="rera">RERA : P51700046171</p>
-          </div>
-        </div>
+        
       </div>
     </SwiperSlide>
 
@@ -85,7 +59,9 @@ function Home({ onBrochureClick }) {
       <div className="slide">
         <img src={Banner2} alt="Banner 2" className="slide-img" />
 
-        <div className="property-card-overlay">
+         </div>
+    </SwiperSlide>
+    <div className="property-card-overlay">
           <div className="property-card">
             <div className="card-badge">New Launch</div>
             <h2 className="card-title">MOHAN PRECIOUS GREENS</h2>
@@ -94,12 +70,12 @@ function Home({ onBrochureClick }) {
 
             <div className="card-details">
               <div>
-                <span className="label">Land Parcel</span>
-                <span className="value">10 Acres</span>
+                <span className="label">Land Parcel</span> <span className="value">10 Acres</span>
+                
               </div>
               <div>
-                <span className="label">Floors</span>
-                <span className="value">18 Storey</span>
+                <span className="label">Floors </span><span className="value">18 Storey</span>
+                
               </div>
             </div>
 
@@ -112,8 +88,6 @@ function Home({ onBrochureClick }) {
             <p className="rera">RERA : P51700046171</p>
           </div>
         </div>
-      </div>
-    </SwiperSlide>
   </Swiper>
      </div>
 

@@ -107,13 +107,19 @@
 }
 
 .card-details {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
   background: #f1f1f1;
   padding: 10px 16px;
   border-radius: 8px;
   margin-bottom: 16px;
   font-size: 0.85rem;
+}
+
+.label{
+  font-weight: bold;
 }
 
 .card-price {
