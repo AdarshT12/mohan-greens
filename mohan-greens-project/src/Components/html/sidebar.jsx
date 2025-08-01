@@ -4,12 +4,12 @@ import "react-phone-input-2/lib/style.css";
 import "../css/sidebar.css";
 import freePickupImage from "../../assets/freepick.png";
 
-const EnquiryForm = ({ onBrochureClick }) => {
+const EnquiryForm = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [consent, setConsent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!name.trim()) {
@@ -27,13 +27,36 @@ const EnquiryForm = ({ onBrochureClick }) => {
       return;
     }
 
-    alert("Form submitted successfully!");
-    // Proceed with API call or brochure download
+    try {
+      const response = await fetch("https://yourdomain.com/enquiry.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          phone: phone.trim(),
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert("Form submitted successfully!");
+        setName("");
+        setPhone("");
+        setConsent(false);
+      } else {
+        alert("Error: " + result.message);
+      }
+    } catch (err) {
+      console.error("Submission failed:", err);
+      alert("There was an error submitting the form.");
+    }
   };
 
   return (
     <div className="enquiry-wrapper">
-      {/* Header Strip */}
       <div className="header-strip">
         <div className="schedule-visit">Schedule Visit</div>
         <div className="divider"></div>
@@ -42,14 +65,11 @@ const EnquiryForm = ({ onBrochureClick }) => {
         </div>
       </div>
 
-      {/* Call Back Box */}
       <div className="call-back-box">
-        <button className="request-call" onClick={onBrochureClick}>Request Call Back</button>
-        <a
-          href="https://wa.me/917710065994"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <button className="request-call" onClick={handleSubmit}>
+          Request Call Back
+        </button>
+        <a href="https://wa.me/919890834878" target="_blank" rel="noreferrer">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
             alt="WhatsApp"
@@ -58,10 +78,8 @@ const EnquiryForm = ({ onBrochureClick }) => {
         </a>
       </div>
 
-      {/* Enquiry Heading */}
       <h3 className="enquire-heading">ENQUIRE NOW</h3>
 
-      {/* Form Starts */}
       <form className="enquiry-form-fields" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -82,11 +100,10 @@ const EnquiryForm = ({ onBrochureClick }) => {
           inputProps={{
             required: true,
             name: "phone",
-            autoFocus: false
+            autoFocus: false,
           }}
         />
 
-        {/* Consent Checkbox */}
         <label className="checkbox-container">
           <input
             type="checkbox"
@@ -107,19 +124,13 @@ const EnquiryForm = ({ onBrochureClick }) => {
           </span>
         </label>
 
-        {/* Submit Button */}
         <button type="submit" className="submit-btn">
           Submit
         </button>
       </form>
 
-      {/* Pickup Banner */}
       <div className="pickup-banner">
-        <img
-          src={freePickupImage}
-          alt="Pickup & Drop"
-          className="pickup-img"
-        />
+        <img src={freePickupImage} alt="Pickup & Drop" className="pickup-img" />
       </div>
     </div>
   );

@@ -458,7 +458,7 @@
   left: 0;
   width: 100%;
   background-color: #006837; /* dark green */
-  display: flex;
+  display: none;
   justify-content: space-between;
   z-index: 10000;
   border-top-left-radius: 10px;
@@ -492,7 +492,6 @@
 }
 
 @media (max-width: 768px) {
-  /* Global paddings and text alignment */
   .slider-container {
     height: 220px;
   }
@@ -503,17 +502,17 @@
 
   .swiper-button-prev,
   .swiper-button-next {
-    top: 95%;
+    top: 60%;
     width: 36px;
     height: 36px;
   }
 
   .swiper-button-prev {
-    left: 10%;
+    left: 0%;
   }
 
   .swiper-button-next {
-    right: 10%;
+    right: 0%;
   }
 
   .project-container {
@@ -547,6 +546,10 @@
   .pricing-containers {
     flex-direction: column;
     align-items: center;
+  }
+  
+  .mobile-action-bar{
+    display: flex;
   }
 
   .pricing-card {
