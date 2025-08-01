@@ -139,7 +139,7 @@
 /* === Pricing Section === */
 .pricing-container {
   text-align: center;
-  padding: 30px 20px;
+  padding: 50px 20px;
   margin: 20px 0;
   background: var(--gray-bg);
 }
@@ -168,19 +168,23 @@
   gap: 30px;
 }
 
+.pricing-item {
+  position: relative;
+}
+
 .pricing-card {
   flex: 50%;
   background: #fff;
   border-radius: 20px;
   border: 2px solid var(--border-color);
   padding: 10px 20px;
-  width: 350px;
+  width: 380px;
   transition: transform 0.3s ease;
-  position: static;
+  
 }
 
 .pricing-card h3 {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: #000;
   margin-bottom: 10px;
@@ -193,21 +197,25 @@
 }
 
 .price {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--heading-green);
   margin-bottom: 30px;
 }
 
 .costing-button {
+  position: absolute;
+  bottom: -18px; 
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--green);
   color: #fff;
   padding: 10px 20px;
-  font-size: 17px;
+  font-size: 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: fit-content;
+  width: 80%;
   outline: 3px solid rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
 }

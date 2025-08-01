@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../../Components/css/popup.css";
+import PhoneInput from "react-phone-input-2";
+import 'remixicon/fonts/remixicon.css';
 
 const EnquiryPopup = ({ isOpen, onClose }) => {
   const [name, setName] = useState("");
@@ -38,12 +40,32 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
 
         <form className="popup-body" onSubmit={handleSubmit}>
           <div className="popup-left">
-            <h4 className="promise-title">WE PROMISE</h4>
-            <ul className="promise-list">
-              <li><strong>INSTANT</strong><br />CALL BACK</li>
-              <li><strong>FREE</strong><br />SITE VISIT</li>
-              <li><strong>₹ UNMATCHED</strong><br />PRICE</li>
+           <div className="we-promise-box">
+            <div className="we-promise-header">WE PROMISE</div>
+            <ul className="we-promise-list">
+              <li>
+                <i className="ri-headphone-line"></i>
+                <div>
+                  <strong>INSTANT</strong><br />
+                  <span>CALL BACK</span>
+                </div>
+              </li>
+              <li>
+                <i className="ri-taxi-line"></i>
+                <div>
+                  <strong>FREE</strong><br />
+                  <span>SITE VISIT</span>
+                </div>
+              </li>
+              <li>
+                <i className="ri-currency-line"></i>
+                <div>
+                  <strong>UNMATCHED</strong><br />
+                  <span>PRICE</span>
+                </div>
+              </li>
             </ul>
+          </div>
           </div>
 
           <div className="popup-right">
@@ -56,16 +78,18 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
               required
             />
             <div className="phone-input">
-              <span className="country-code">🇮🇳 +91</span>
-              <input
-                type="tel"
-                placeholder="Enter Your Number"
+              <PhoneInput
+                country={"in"}
                 value={phone}
-                onChange={(e) => setPhone(e.target.value.replace(/\D/g, ""))}
-                className="form-input"
-                maxLength="10"
-                pattern="[0-9]{10}"
-                required
+                onChange={setPhone}
+                inputClass="custom-phone-input"
+                buttonClass="custom-phone-button"
+                containerClass="custom-phone-container"
+                inputProps={{
+                  required: true,
+                  name: "phone",
+                  autoFocus: false
+                }}
               />
             </div>
 
@@ -78,8 +102,9 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
               />
               <label htmlFor="consent">
                 I Consent to The Processing of Provided Data According To 
-                <a href="#"> Privacy Policy</a> | 
-                <a href="#"> Terms & Conditions</a>.
+                <a href="home.jsx"> Privacy Policy</a> | 
+                <a href="home.jsx"> Terms & Conditions</a>.
+                I Authorize Blox and its representatives to Call, SMS, Email or WhatsApp Me About Its Products and Offers. This Consent Overrides Any Registration For DNC/NDNC.
               </label>
             </div>
 
@@ -89,10 +114,13 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
           </div>
         </form>
 
-        <div className="availability-section">
-          <button type="button">Available Units</button>
-          <button type="button">Payment Plan</button>
-          <button type="button">Floor Plans</button>
+        <div className="availability-box">
+          <div className="availability-header">GET INFORMATION ON AVAILABILITIES</div>
+          <div className="availability-options">
+            <div className="option"><i className="ri-shield-check-line"></i> Available Units</div>
+            <div className="option"><i className="ri-shield-check-line"></i> Payment Plan</div>
+            <div className="option"><i className="ri-shield-check-line"></i> Floor Plans</div>
+          </div>
         </div>
       </div>
     </div>

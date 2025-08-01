@@ -2,9 +2,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -12,82 +12,120 @@
 }
 
 .popup-content {
-  width: 90%;
-  max-width: 720px;
   background: white;
-  border-radius: 8px;
-  padding: 20px 30px;
+  border-radius: 16px;
+  width: 650px;
+  max-width: 95%;
   position: relative;
-  font-family: Arial, sans-serif;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  font-family: 'Poppins', sans-serif;
+  padding:20px 0px;
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 20px;
-  background: transparent;
-  border: none;
   font-size: 24px;
+  background: none;
+  border: none;
+  color: #333;
   cursor: pointer;
 }
 
 .popup-heading {
-  color: #006400;
-  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #00703C;
+  margin-bottom: 6px;
+  padding-left: 20px;
 }
 
-.underline {
-  width: 40px;
+.popup-overlay .underline {
+  width: 60px;
   height: 3px;
-  background: #006400;
-  margin-bottom: 20px;
+  background: #838383;
+  margin-bottom: 20px;  
+  display: flex;
+  margin:10px 0px;
+  margin-left: 20px;
 }
 
 .popup-body {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .popup-left {
   flex: 1;
-  background: #f0f4f0;
-  padding: 15px;
-  border-radius: 8px;
+  background-color: #f3f6f5;
+  border-radius: 0px 30px 30px 0px;
+  padding: 20px;
   text-align: center;
 }
 
-.promise-title {
-  background: #006400;
-  color: white;
-  padding: 8px 0;
-  margin-bottom: 10px;
-  border-radius: 5px;
+.we-promise-box {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  width: 220px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.promise-list {
+.we-promise-header {
+  background-color: #00703C;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 6px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.we-promise-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.promise-list li {
-  margin-bottom: 12px;
+.we-promise-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #00703C;
   font-size: 14px;
-  color: #333;
+}
+
+.we-promise-list li i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.we-promise-list strong {
+  font-weight: 600;
+  color: #00703C;
+}
+
+.we-promise-list span {
+  font-size: 12px;
+  color: #666;
+  text-align: left;
 }
 
 .popup-right {
   flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
 }
 
 .form-input {
-  width: 100%;
   padding: 10px;
-  margin-bottom: 12px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
+  width: 90%;
 }
 
 .phone-input {
@@ -97,51 +135,92 @@
 }
 
 .country-code {
-  white-space: nowrap;
-  font-size: 14px;
-  padding: 8px;
-  background: #f4f4f4;
-  border-radius: 6px;
+  padding: 10px;
+  background: #f1f1f1;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
 .checkbox-area {
   font-size: 12px;
-  color: #555;
-  margin-bottom: 15px;
+  line-height: 1.4;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
 }
 
-.checkbox-area a {
-  color: #006400;
+.checkbox-area input[type="checkbox"] {
+  margin-top: 2px;
+}
+
+.checkbox-area label{
+  font-size: 8px;
+  width: 85%;
+}
+
+.checkbox-area label a {
+  color: #00703C;
   text-decoration: none;
-  margin: 0 3px;
+  margin-left: 2px;
 }
 
 .submit-btn {
-  background: #006400;
+  background-color: #00703C;
   color: white;
-  border: none;
   padding: 10px 20px;
-  border-radius: 6px;
-  font-size: 14px;
+  font-size: 15px;
+  width: fit-content;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 100, 0, 0.4);
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  margin: 0px auto;
 }
 
-.availability-section {
-  margin-top: 20px;
+.submit-btn:hover {
+  transform: scale(1.03);
+}
+
+.availability-box {
+  border: 2px solid #00703C;
+  border-radius: 0px 40px 0px 40px;
+  padding: 30px 20px 20px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.availability-header {
+  background-color: #00703C;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 6px 16px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 15px 15px;
+}
+
+.availability-options {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: 2px solid #006400;
-  border-radius: 8px;
-  padding: 15px 0;
+  gap: 10px;
+  margin-top: 10px;
 }
 
-.availability-section button {
-  background: none;
-  border: none;
-  font-size: 14px;
-  color: #006400;
-  cursor: pointer;
+.option {
+  font-size: 13px;
+  color: #00703C;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }

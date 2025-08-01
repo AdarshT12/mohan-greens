@@ -19,7 +19,6 @@ function Home({ onBrochureClick }) {
   const [showMore, setShowMore] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-  const handleOpenPopup = () => setIsPopupOpen(true);
   const handleClosePopup = () => setIsPopupOpen(false);
   return (
     <>
@@ -46,7 +45,6 @@ function Home({ onBrochureClick }) {
           </SwiperSlide>
         </Swiper>
       </div>
-
 
       {/* Project Content */}
       <div className="project-container">
@@ -97,7 +95,6 @@ function Home({ onBrochureClick }) {
           <img src={Banner2} alt="Mohan Precious Greens" />
         </div>
       </div>
-
 
       {/* Pricing Section */}
       <div className="pricing-container" id="price">
@@ -162,6 +159,7 @@ function Home({ onBrochureClick }) {
       </div>
 
       <TabLayout onBrochureClick={onBrochureClick}/>
+
       <div className="footer-container">
         <img src={Logo} alt="Mohan Precious Greens" className="footer-logo" />
         <img src={QrCode} alt="qr-code" className="qr-code" />
