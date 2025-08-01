@@ -14,10 +14,24 @@ import QrCode from "../src/assets/P51700046171.jpg";
 import "./home.css";
 import TabLayout from "./Components/html/tabLayout";
 import EnquiryPopup from "../src/Components/html/popup"; 
+import Kidsplay from "../src/assets/kids-play.jpg";
+import Court from "../src/assets/court.jpg";
+import Gym from "../src/assets/gym.jpg";
+import Theatre from "../src/assets/theatre.jpg";
+import Yoga from "../src/assets/yoga.jpg";
+import Jogging from "../src/assets/jogging.jpg";
 
 function Home({ onBrochureClick }) {
   const [showMore, setShowMore] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const amenitiesList = [
+    { name: 'Kids Play Area', img: Kidsplay },
+    { name: 'Multipurpose Court', img: Court },
+    { name: 'Gym', img: Gym },
+    { name: 'Mini Theatre', img: Theatre },
+    { name: 'Yoga', img: Yoga },
+    { name: 'Jogging Track', img: Jogging },
+  ];
 
   const handleClosePopup = () => setIsPopupOpen(false);
   return (
@@ -140,6 +154,19 @@ function Home({ onBrochureClick }) {
           <button className="layout-btn" onClick={onBrochureClick}>Request Unit Plan Layout</button>
         </div>
       </div>
+
+      <section className="amenities-section">
+      <h2 className="amenities-heading">Amenities</h2>
+      <div className="underline" />
+        <div className="amenities-grid">
+          {amenitiesList.map((amenity, index) => (
+            <div className="amenity-card" key={index}>
+              <img src={amenity.img} alt={amenity.name} />
+              <p className="amenity-name">{amenity.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <div className="location-section" id="location">
         <h2 className="location-heading">Location</h2>
