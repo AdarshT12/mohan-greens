@@ -71,3 +71,52 @@
 .location-button:hover {
   background-color: #004f2a;
 }
+
+@media (max-width: 768px) {
+  .tab-wrapper {
+    padding: 20px 10px;
+  }
+
+  .tab-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .tab-button {
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .tab-button.active {
+    border: 2px solid #ccc;
+    border-bottom: none;
+    border-radius: 10px;
+  }
+
+  .tab-content {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  .tab-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tab-item {
+    font-size: 14px;
+  }
+
+  .location-button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-button {
+    width: 100%;
+    max-width: 300px;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}

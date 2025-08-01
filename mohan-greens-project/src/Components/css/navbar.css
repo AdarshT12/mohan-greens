@@ -89,3 +89,45 @@
 .navbar-right .blox-logo {
   height: 22px;
 }
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 16px;
+  }
+
+  .navbar-left {
+    flex: 1;
+  }
+
+  .navbar-center {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .navbar-center.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+}

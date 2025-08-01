@@ -211,7 +211,18 @@ function Home({ onBrochureClick }) {
         </div>
       </div>
 
-
+      {/* Mobile Bottom Buttons */}
+      <div className="mobile-action-bar">
+        <a href="tel:+919999999999" className="action-button">
+          <i className="ri-phone-line"></i> Call
+        </a>
+        <button className="action-button" onClick={() => setIsPopupOpen(true)}>
+          <i className="ri-edit-line"></i> Enquire
+        </button>
+        <a href="https://wa.me/919999999999" className="action-button" target="_blank" rel="noopener noreferrer">
+          <i className="ri-whatsapp-line"></i> WhatsApp
+        </a>
+      </div>
     </>
   );
 }
