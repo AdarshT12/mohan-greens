@@ -1,3 +1,16 @@
+/* === Global Defaults === */
+:root {
+  --green: #0a9442;
+  --green-dark: #087535;
+  --heading-green: #007030;
+  --button-green: #006622;
+  --button-hover: #004d1a;
+  --gray-bg: #f1f2f2;
+  --border-color: #ccc;
+}
+
+
+/* === Swiper / Slider Section === */
 .slider-container {
   width: 100%;
   height: 100vh;
@@ -5,67 +18,78 @@
   overflow: hidden;
 }
 
-.swiper, .swiper-wrapper, .swiper-slide {
+.slider-container .swiper {
   width: 100%;
   height: 100%;
 }
 
-/* Ensure image fills fully */
+.slider-container .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
 .slide-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-
 }
+
+/* === Project Section === */
 .project-container {
+  margin: 15px 0;
   display: flex;
   flex-wrap: wrap;
   padding: 40px;
-  font-family: 'Segoe UI', sans-serif;
   background: #fff;
   gap: 20px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .project-content {
   flex: 1;
   min-width: 300px;
-  max-width: 650px;
+  max-width: 600px;
 }
 
 .project-content h2 {
   font-size: 32px;
-  color: #007030;
+  color: var(--heading-green);
   font-weight: 700;
 }
 
-.underline {
+.underline{
   width: 50px;
   height: 4px;
-  background: #ccc;
-  margin: 10px 0 20px 0;
+  background: var(--border-color);
+  margin: 8px auto 30px auto;
 }
 
 .project-content p {
-  font-size: 16px;
+  font-size: 15px;
   color: #333;
-  line-height: 1.7;
   margin-bottom: 15px;
+  font-weight: 350;
 }
 
 .read-link {
   display: inline-block;
   margin-bottom: 20px;
   color: #0066cc;
-  text-decoration: none;
   font-weight: 500;
 }
 
 .brochure-btn {
-  background-color: #0a9442;
+  background-color: var(--green);
   color: white;
-  padding: 12px 20px;
+  padding: 10px 20px;
   border: none;
   font-size: 16px;
   display: flex;
@@ -73,109 +97,125 @@
   gap: 10px;
   border-radius: 8px;
   cursor: pointer;
+  outline: 3px solid rgba(0, 0, 0, 0.2);
   transition: background 0.3s;
 }
 
 .brochure-btn:hover {
-  background-color: #087535;
+  outline: 3px solid rgba(0, 0, 0, 0.2);
+  background-color: var(--green-dark);
 }
 
 .project-image img {
+  margin-top: 30px;
   width: 100%;
-  max-width: 500px;
-  border-radius: 25px;
+  max-width: 400px;
+  border-radius: 0 60px 0 60px;
   object-fit: cover;
 }
+
+/* === Pricing Section === */
 .pricing-container {
   text-align: center;
-  padding: 50px 20px;
-  background: #f5f7f9;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 30px 20px;
+  margin: 20px 0;
+  background: var(--gray-bg);
 }
 
 .pricing-heading {
-  color: #007030;
+  color: var(--heading-green);
   font-size: 28px;
   font-weight: 700;
 }
 
-.underline {
+.underline-pricing {
   width: 40px;
   height: 3px;
-  background: #ccc;
+  background: var(--border-color);
   margin: 8px auto 30px auto;
+}
+
+.pricing-containers {
+  display: flex;
 }
 
 .pricing-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .pricing-card {
+  flex: 50%;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px 25px;
-  width: 500px;
+  border: 2px solid var(--border-color);
+  padding: 10px 20px;
+  width: 350px;
   transition: transform 0.3s ease;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
+  position: static;
 }
 
 .pricing-card h3 {
-  font-size: 24px;
-  color: #111;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
   margin-bottom: 10px;
 }
 
 .size {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 350;
 }
 
 .price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #007030;
-  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--heading-green);
+  margin-bottom: 30px;
 }
 
 .costing-button {
-  background: #0a9442;
+  background: var(--green);
   color: #fff;
-  padding: 10px 18px;
-  font-size: 15px;
+  padding: 10px 20px;
+  font-size: 17px;
   border: none;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
+  width: fit-content;
+  outline: 3px solid rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
 }
 
 .costing-button:hover {
-  background: #087535;
+  outline: 3px solid rgba(0, 0, 0, 0.2);  
+  background: var(--green-dark);
 }
+
+/* === Layout Section === */
 .layout-container {
   display: flex;
   justify-content: center;
   gap: 60px;
   flex-wrap: wrap;
   padding: 40px 0;
+  margin: 10px 0;
+  background-color: white;
 }
 
 .layout-card {
   text-align: center;
-  max-width: 400px;
+  max-width: 420px;
+  min-height: 350px;
 }
 
 .layout-heading {
   font-size: 24px;
   font-weight: 600;
-  color: #006622;
+  color: var(--button-green);
   margin-bottom: 20px;
   position: relative;
 }
@@ -185,7 +225,7 @@
   display: block;
   width: 40px;
   height: 3px;
-  background-color: #ccc;
+  background-color: var(--border-color);
   margin: 8px auto 0;
   border-radius: 10px;
 }
@@ -193,28 +233,30 @@
 .image-box {
   position: relative;
   overflow: hidden;
-  border: 1px solid #ccc;
-  border-radius: 0 60px 60px 0;
+  border: 2px solid var(--border-color);
+  height: 250px;
+  border-radius: 0 60px 0 60px;
   transition: transform 0.3s ease;
 }
 
+.layout-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .left-rounded {
-  border-radius: 60px 0 0 60px;
+  border-radius: 0 60px 0 60px;
 }
 
 .right-rounded {
-  border-radius: 0 60px 60px 0;
-}
-
-.layout-image {
-  width: 70%;
-  height: auto;
-  display: block;
+  border-radius: 0 60px 0 60px;
 }
 
 .overlay-text {
   position: absolute;
-  bottom: 0;
+  bottom: 40%;
   width: 100%;
   padding: 12px 0;
   background-color: rgba(0, 0, 0, 0.5);
@@ -225,49 +267,46 @@
 
 .layout-btn {
   margin-top: 20px;
-  background-color: #006622;
+  background-color: var(--button-green);
   color: white;
   border: none;
   padding: 12px 24px;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  outline: 3px solid rgba(0, 0, 0, 0.2);
   transition: background 0.3s ease;
 }
 
 .layout-btn:hover {
-  background-color: #004d1a;
+  outline: 3px solid rgba(0, 0, 0, 0.2);
+  background-color: var(--button-hover);
 }
+
+/* === Location Section === */
 .location-section {
-  padding: 3rem 1rem;
+  margin: 15px 0;
+  padding: 1.5rem 3rem;
   text-align: center;
+  background-color: white;
 }
 
 .location-heading {
   font-size: 2rem;
   color: #2a7b3f;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.underline {
-  width: 60px;
-  height: 4px;
-  background-color: #2a7b3f;
-  margin: 0 auto 2rem;
-  border-radius: 2px;
 }
 
 .map-container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
+  height: 240px;
   margin: 0 auto;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0 60px 0 60px;
 }
+
 .footer-container {
   text-align: center;
   padding: 40px 20px;

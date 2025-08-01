@@ -4,11 +4,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-
+import 'remixicon/fonts/remixicon.css';
 import Banner1 from "../src/assests/bannner-1.webp";
 import Banner2 from "../src/assests/banner-2.webp";
+import Layout1 from "../src/assests/smp.webp";
+import Layout2 from "../src/assests/unitplan.webp";
 
 import "./home.css";
+import TabLayout from "./Components/html/tabLayout";
 
 function Home() {
   const [showMore, setShowMore] = useState(false);
@@ -31,7 +34,6 @@ function Home() {
               <img src={Banner1} alt="Banner 1" className="slide-img" />
             </div>
           </SwiperSlide>
-
           <SwiperSlide>
             <div className="slide">
               <img src={Banner2} alt="Banner 2" className="slide-img" />
@@ -39,6 +41,7 @@ function Home() {
           </SwiperSlide>
         </Swiper>
       </div>
+
 
       {/* Project Content */}
       <div className="project-container">
@@ -72,7 +75,7 @@ function Home() {
           )}
 
           <a
-            href="#"
+            href="home.jsx"
             className="read-link"
             onClick={(e) => {
               e.preventDefault();
@@ -82,11 +85,11 @@ function Home() {
             {showMore ? "Read less" : "Read more"}
           </a>
 
-          <button className="brochure-btn">Request Brochure</button>
+          <button className="brochure-btn "><i class="ri-download-2-line"></i>Request Brochure</button>
         </div>
 
-        <div className="project-image">
-          {/* Add image or map here if needed */}
+        <div className="project-image" >
+          <img src={Banner2} alt="Mohan Precious Greens"/>
         </div>
       </div>
 
@@ -94,56 +97,65 @@ function Home() {
       <div className="pricing-container">
         <h2 className="pricing-heading">Area & Pricing</h2>
         <div className="underline" />
-        <div className="pricing-cards">
-          <div className="pricing-card">
-            <h3>1 BHK</h3>
-            <p className="size">500 Sq. ft</p>
-            <p className="price">₹ 36.50 Lacs* Onwards</p>
-            <button className="costing-button">Complete Costing Details</button>
+          <div className="pricing-cards">
+            <div className="pricing-item">
+              <div className="pricing-card">
+                <h3>1 BHK</h3>
+                <p className="size">500 Sq. ft</p>
+                <p className="price">₹ 36.50 Lacs* Onwards</p>            
+              </div>
+              <button className="costing-button">Complete Costing Details</button>
+            </div>
+
+            <div className="pricing-item">
+              <div className="pricing-card">
+                <h3>2 BHK</h3>
+                <p className="size">610–710 Sq. ft</p>
+                <p className="price">₹ 52.50 Lacs* Onwards</p>            
+              </div>
+              <button className="costing-button">Complete Costing Details</button>
+            </div>
           </div>
-          <div className="pricing-card">
-            <h3>2 BHK</h3>
-            <p className="size">610–710 Sq. ft</p>
-            <p className="price">₹ 52.50 Lacs* Onwards</p>
-            <button className="costing-button">Complete Costing Details</button>
-          </div>
-        </div>
       </div>
-        <div className="layout-container">
+
+      <div className="layout-container">
       <div className="layout-card">
         <h2 className="layout-heading">Master Plan Layout</h2>
         <div className="image-box left-rounded">
-          <img src="/masterplan.jpg" alt="Master Plan" className="layout-image" />
+          <img src={Layout1} alt="Master Plan" className="layout-image" />
           <div className="overlay-text">Request Master Plan Layout</div>
         </div>
         <button className="layout-btn">Request Master Plan Layout</button>
-      </div>
+      </div>  
 
       <div className="layout-card">
         <h2 className="layout-heading">Unit Plan Layout</h2>
         <div className="image-box right-rounded">
-          <img src="/unitplan.jpg" alt="Unit Plan" className="layout-image" />
+          <img src={Layout2} alt="Unit Plan" className="layout-image" />
           <div className="overlay-text">Request Unit Plan Layout</div>
         </div>
         <button className="layout-btn">Request Unit Plan Layout</button>
       </div>
-    </div>
-        <div className="location-section">
+      </div>
+
+      <div className="location-section">
       <h2 className="location-heading">Location</h2>
       <div className="underline" />
 
       <div className="map-container">
         <iframe
           title="Mohan Precious Greens Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.042356090269!2d73.17162891437993!3d19.192738952647885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be794c409bc2fc7%3A0x8a34c8aa0ed3de7f!2sMohan%20Precious%20Greens%20(MPG)!5e0!3m2!1sen!2sin!4v1691216929184!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15071.725817664952!2d73.200976!3d19.198196!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be793a60854a98f%3A0x2d9a66482e3eba4d!2sMohan%20Precious%20Greens%20(MPG)!5e0!3m2!1sen!2sin!4v1754031832313!5m2!1sen!2sin" 
           width="100%"
-          height="450"
+          height="250"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
     </div>
+    
+    <TabLayout/>
         <div className="footer-container">
 
         <p>Project MahaRERA No. – P51700046171</p>
@@ -164,7 +176,7 @@ function Home() {
 
       <div className="footer-bottom">
         <div>
-          <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a>
+          <a href="home.jsx">Privacy Policy</a> | <a href="home.jsx">Terms & Conditions</a>
         </div>
         <p>All Rights Reserved. © 2025 Method & Madness Technology Pvt. Ltd</p>
       </div>
