@@ -89,6 +89,7 @@ function Home() {
           {/* Add image or map here if needed */}
         </div>
       </div>
+      
 
       {/* Pricing Section */}
       <div className="pricing-container">
