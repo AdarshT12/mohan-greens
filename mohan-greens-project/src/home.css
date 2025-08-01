@@ -63,6 +63,98 @@
   right: 40%; 
 }
 
+/* You can reuse property-card styles */
+.property-card {
+  width: 300px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.card-badge {
+  background: #198754;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 24px 0 4px;
+}
+
+.card-location {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+.card-by {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  background: #f1f1f1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.card-price {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.card-price h3 {
+  font-size: 1.4rem;
+  color: #007f00;
+  margin: 4px 0;
+}
+
+.enquire-btn {
+  background: #198754;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquire-btn:hover {
+  background: #146c43;
+}
+
+.rera {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 12px;
+}
+
+.property-card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
 
 /* === Project Section === */
 .project-container {

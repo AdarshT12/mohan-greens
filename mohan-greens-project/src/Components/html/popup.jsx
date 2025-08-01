@@ -99,12 +99,22 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
               />
               <label htmlFor="consent">
                 I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms & Conditions</a>.
+                I Authorize Blox and its representatives to Call, SMS, Email or WhatsApp Me About Its Products and Offers. This Consent Overrides Any Registration For DNC/NDNC.
               </label>
             </div>
+            
 
-            <button type="submit" className="submit-btn">Submit</button>
+            <button type="submit" className="submit-btn">Submit</button>            
           </div>
         </form>
+        <div className="availability-box">
+          <div className="availability-header">GET INFORMATION ON AVAILABILITIES</div>
+          <div className="availability-options">
+            <div className="option"><i className="ri-shield-check-line"></i> Available Units</div>
+            <div className="option"><i className="ri-shield-check-line"></i> Payment Plan</div>
+            <div className="option"><i className="ri-shield-check-line"></i> Floor Plans</div>
+          </div>
+        </div>
       </div>
     </div>
   );

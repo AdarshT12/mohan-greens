@@ -40,25 +40,82 @@ function Home({ onBrochureClick }) {
       <EnquiryPopup isOpen={isPopupOpen} onClose={handleClosePopup} />
       {/* Swiper Slider */}
       <div className="slider-container">
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          navigation
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop
-          speed={800}
-        >
-          <SwiperSlide>
-            <div className="slide">
-              <img src={Banner1} alt="Banner 1" className="slide-img" />
+  <Swiper
+    modules={[Navigation, Autoplay]}
+    navigation
+    autoplay={{ delay: 3000, disableOnInteraction: false }}
+    loop
+    speed={800}
+  >
+    <SwiperSlide>
+      <div className="slide">
+        <img src={Banner1} alt="Banner 1" className="slide-img" />
+
+        <div className="property-card-overlay">
+          <div className="property-card">
+            <div className="card-badge">New Launch</div>
+            <h2 className="card-title">MOHAN PRECIOUS GREENS</h2>
+            <p className="card-location">Ambernath East, Thane</p>
+            <p className="card-by">By Mohan Group</p>
+
+            <div className="card-details">
+              <div>
+                <span className="label">Land Parcel</span>
+                <span className="value">10 Acres</span>
+              </div>
+              <div>
+                <span className="label">Floors</span>
+                <span className="value">18 Storey</span>
+              </div>
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="slide">
-              <img src={Banner2} alt="Banner 2" className="slide-img" />
+
+            <div className="card-price">
+              <p>1 & 2 BHK Homes Start</p>
+              <h3>₹ 36.50 Lacs<sup>*</sup> Onwards</h3>
             </div>
-          </SwiperSlide>
-        </Swiper>
+
+            <button className="enquire-btn" onClick={onBrochureClick}>Enquire Now</button>
+            <p className="rera">RERA : P51700046171</p>
+          </div>
+        </div>
       </div>
+    </SwiperSlide>
+
+    <SwiperSlide>
+      <div className="slide">
+        <img src={Banner2} alt="Banner 2" className="slide-img" />
+
+        <div className="property-card-overlay">
+          <div className="property-card">
+            <div className="card-badge">New Launch</div>
+            <h2 className="card-title">MOHAN PRECIOUS GREENS</h2>
+            <p className="card-location">Ambernath East, Thane</p>
+            <p className="card-by">By Mohan Group</p>
+
+            <div className="card-details">
+              <div>
+                <span className="label">Land Parcel</span>
+                <span className="value">10 Acres</span>
+              </div>
+              <div>
+                <span className="label">Floors</span>
+                <span className="value">18 Storey</span>
+              </div>
+            </div>
+
+            <div className="card-price">
+              <p>1 & 2 BHK Homes Start</p>
+              <h3>₹ 36.50 Lacs<sup>*</sup> Onwards</h3>
+            </div>
+
+            <button className="enquire-btn" onClick={onBrochureClick}>Enquire Now</button>
+            <p className="rera">RERA : P51700046171</p>
+          </div>
+        </div>
+      </div>
+    </SwiperSlide>
+  </Swiper>
+     </div>
 
       {/* Project Content */}
       <div className="project-container">
