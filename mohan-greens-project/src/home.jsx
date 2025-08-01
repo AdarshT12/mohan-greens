@@ -92,6 +92,7 @@ function Home() {
           <img src={Banner2} alt="Mohan Precious Greens"/>
         </div>
       </div>
+      
 
       {/* Pricing Section */}
       <div className="pricing-container">
