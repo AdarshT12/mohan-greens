@@ -83,7 +83,7 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
             <PhoneInput
               country={"in"}
               value={phone}
-              onChange={setPhone}
+               onChange={setPhone}
               inputClass="custom-phone-input"
               inputProps={{
                 required: true

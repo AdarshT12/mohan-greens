@@ -132,8 +132,12 @@
 .phone-input {
   display: flex;
   align-items: center;
-  gap: 8px;
+  width: 80%;
 }
+
+ .react-tel-input {
+  width: 90% !important;
+ }
 
 .country-code {
   padding: 10px;
