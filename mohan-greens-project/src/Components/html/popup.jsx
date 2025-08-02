@@ -31,8 +31,8 @@ const EnquiryPopup = ({ isOpen, onClose }) => {
 
         // Brochure download
         const link = document.createElement("a");
-        link.href = "/brochure.pdf";
-        link.download = "Brochure.pdf";
+        link.href = "/mohan-precious-greens.pdf";
+        link.download = "mohan-precious-greens.pdf";
         link.click();
 
         // Reset and close
