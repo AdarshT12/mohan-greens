@@ -70,7 +70,7 @@ function Home({ onBrochureClick }) {
             Mohan Precious Greens is a residential project by the Mohan Group,
             offering thoughtfully designed 1 & 2 BHK Homes with a focus on
             modern living and sustainability. The project features over 30
-            lifestyle amenities, including a lap pool, clubhouse, mini-theatre,
+            lifestyle amenities, inpmncluding a lap pool, clubhouse, mini-theatre,
             gym, spa, squash court, skating rink, cycling track, aroma gardens,
             and dedicated zones for seniors and children. Its architecture
             promotes eco-conscious living with green decks, landscaped gardens,

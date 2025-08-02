@@ -38,7 +38,7 @@ const EnquiryForm = ({ onBrochureClick }) => {
         <div className="schedule-visit">Schedule Visit</div>
         <div className="divider"></div>
         <div className="phone-number">
-          <span className="phone-icon"></span> +91 77100 65994
+          <span className="phone-icon"></span>+919890834878
         </div>
       </div>
 
@@ -46,7 +46,7 @@ const EnquiryForm = ({ onBrochureClick }) => {
       <div className="call-back-box">
         <button className="request-call" onClick={onBrochureClick}>Request Call Back</button>
         <a
-          href="https://wa.me/917710065994"
+          href="https://wa.me/9890834878"
           target="_blank"
           rel="noopener noreferrer"
         >
