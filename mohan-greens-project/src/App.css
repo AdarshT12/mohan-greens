@@ -34,3 +34,22 @@ html, body, #root {
   height: 100vh;
   flex-shrink: 0;
 }
+
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  .sidebar-column {
+    display: none; /* Hide sidebar on small screens */
+  }
+
+  .home-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .main-content {
+    width: 100%;
+    padding-bottom: 30px; 
+    overflow-y: visible;   
+  }
+}

@@ -63,6 +63,104 @@
   right: 40%; 
 }
 
+/* You can reuse property-card styles */
+.property-card {
+  width: 300px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  position: relative;
+}
+
+.card-badge {
+  background: #198754;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 24px 0 4px;
+}
+
+.card-location {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0;
+}
+
+.card-by {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 16px;
+}
+
+.card-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: #f1f1f1;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+}
+
+.label{
+  font-weight: bold;
+}
+
+.card-price {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.card-price h3 {
+  font-size: 1.4rem;
+  color: #007f00;
+  margin: 4px 0;
+}
+
+.enquire-btn {
+  background: #198754;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.enquire-btn:hover {
+  background: #146c43;
+}
+
+.rera {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 12px;
+}
+
+.property-card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
 
 /* === Project Section === */
 .project-container {
@@ -450,4 +548,293 @@
 .footer-bottom a:hover {
   text-decoration: underline;
    text-align: center;
+}
+
+.mobile-action-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #006837; /* dark green */
+  display: none;
+  justify-content: space-between;
+  z-index: 10000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+.action-button {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.action-button:last-child {
+  border-right: none;
+}
+
+.action-button i {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  /* === Slider === */
+  .slider-container {
+    height: 220px;
+  }
+
+  .slide-img {
+    object-fit: cover;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 60%;
+    width: 36px;
+    height: 36px;
+  }
+
+  .swiper-button-prev {
+    left: 0%;
+  }
+
+  .swiper-button-next {
+    right: 0%;
+  }
+
+  /* === Property Card === */
+  .property-card {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-location {
+    font-size: 0.9rem;
+  }
+
+  .card-by {
+    font-size: 0.75rem;
+  }
+
+  .card-details {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .card-price h3 {
+    font-size: 1.2rem;
+  }
+
+  .enquire-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .rera {
+    font-size: 0.7rem;
+  }
+
+  .property-card-overlay {
+    left: 2%;
+    display: none;
+  }
+
+  /* === Project Section === */
+  .project-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .project-content h2 {
+    font-size: 24px;
+  }
+
+  .project-content p {
+    font-size: 14px;
+  }
+
+  .project-image img {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .brochure-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  /* === Pricing Section === */
+  .pricing-container {
+    padding: 30px 10px;
+  }
+
+  .pricing-heading {
+    font-size: 24px;
+  }
+
+  .pricing-containers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .pricing-card h3 {
+    font-size: 20px;
+  }
+
+  .size {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .costing-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 90%;
+  }
+
+  /* === Layout Section === */
+  .layout-container {
+    gap: 30px;
+    padding: 30px 10px;
+  }
+
+  .layout-card {
+    min-height: auto;
+    max-width: 100%;
+  }
+
+  .layout-heading {
+    font-size: 20px;
+  }
+
+  .overlay-text {
+    font-size: 14px;
+    padding: 10px;
+    bottom: 35%;
+  }
+
+  .layout-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .image-box {
+    height: 200px;
+  }
+
+  /* === Amenities Section === */
+  .amenities-section {
+    padding: 20px 10px;
+  }
+
+  .amenities-heading {
+    font-size: 22px;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenity-card img {
+    height: 180px;
+  }
+
+  .amenity-name {
+    font-size: 13px;
+    bottom: 20px;
+    padding: 8px 12px;
+  }
+
+  /* === Location Section === */
+  .location-section {
+    padding: 1rem;
+  }
+
+  .location-heading {
+    font-size: 1.5rem;
+  }
+
+  .map-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* === Footer === */
+  .footer-container {
+    padding: 30px 10px;
+  }
+
+  .footer-logo {
+    max-width: 120px;
+  }
+
+  .qr-code {
+    max-width: 80px;
+  }
+
+  .footer-text {
+    font-size: 10px;
+  }
+
+  .footer-text a {
+    font-size: 9px !important;
+  }
+
+  .disclaimer {
+    font-size: 10px;
+    text-align: justify;
+    padding: 0;
+  }
+
+  .footer-bottom {
+    font-size: 10px;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  /* === Mobile Action Bar === */
+  .mobile-action-bar {
+    display: flex;
+  }
+
+  .action-button {
+    font-size: 12px;
+    padding: 8px 0;
+    gap: 4px;
+  }
+
+  .action-button i {
+    font-size: 14px;
+  }
 }
