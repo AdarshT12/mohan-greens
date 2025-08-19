@@ -223,7 +223,7 @@ function Home({ onBrochureClick }) {
         <img src={QrCode} alt="qr-code" className="qr-code" />
 
         <p className="maharera-text">Project MahaRERA No. – P51700046171</p>
-        <p className="maharera-text">Agent MahaRERA No. – A51900029429</p>
+        <p className="maharera-text">Agent MahaRERA No. – A031332401468</p>
         <p className="maharera-text">(<a href="https://maharera.maharashtra.gov.in/" target="_blank" rel="noreferrer">
           https://maharera.maharashtra.gov.in/</a>)
         </p>
@@ -238,13 +238,13 @@ function Home({ onBrochureClick }) {
           <div>
             <a href="home.jsx">Privacy Policy</a> | <a href="home.jsx">Terms & Conditions</a>
           </div>
-          <p>All Rights Reserved. © 2025 Method & Madness Technology Pvt. Ltd</p>
+          <p>All Rights Reserved. © 2025 S-SenseRealty</p>
         </div>
       </div>
 
       {/* Mobile Bottom Buttons */}
       <div className="mobile-action-bar">
-        <a href="tel:+917710065994" className="action-button">
+        <a href="tel:+919890834878" className="action-button">
           <i className="ri-phone-line"></i> Call
         </a>
         <button className="action-button" onClick={() => setIsPopupOpen(true)}>
